@@ -4,6 +4,7 @@ import domain.process
 /**
  * Kotlin provides the extension functions [first] and [firstOrNull] that do all the heavy lifting for us. [first] gets
  * the first element or throws and exception. [firstOrNull] gets the first element or returns null if the list is empty.
+ * See also https://kotlinlang.org/docs/collection-elements.html.
  */
 
 val list: List<String> = create()

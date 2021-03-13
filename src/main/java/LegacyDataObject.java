@@ -1,5 +1,4 @@
 import java.time.Instant;
-import java.util.Date;
 
 public class LegacyDataObject {
     private String name;

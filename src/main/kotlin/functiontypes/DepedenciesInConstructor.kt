@@ -3,6 +3,7 @@ package functiontypes
 import domain.MetricsFactory
 import domain.Payload
 import com.fasterxml.jackson.databind.ObjectMapper
+import domain.process
 
 /**
  * This class depends on two other classes ObjectMapper and MetricsFactory. But upon closer examination, we can see that
@@ -19,6 +20,7 @@ class MyDomainLogicOld(
         val payload = objectMapper.readValue(rawData, Payload::class.java)
 
         // do important stuff with payload
+        process(payload)
 
         metrics.emitLatency("doStuff.TIME.${payload.id}", 10)
     }

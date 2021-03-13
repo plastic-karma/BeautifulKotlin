@@ -2,6 +2,7 @@ package functiontypes
 
 import domain.Metrics
 import domain.Payload
+import domain.process
 
 /**
  * This class depends on two functions:
@@ -19,6 +20,7 @@ class MyDomainLogicImproved(
         val payload = mapObject(rawData, Payload::class.java)
 
         // do important stuff with payload
+        process(payload)
 
         metrics.emitLatency("doStuff.TIME.${payload.id}", 10)
     }
