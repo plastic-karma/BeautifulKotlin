@@ -6,9 +6,11 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import domain.process
 
 /**
- * This class depends on two other classes ObjectMapper and MetricsFactory. But upon closer examination, we can see that
- * it really only depends on a single method each. So this class is not really interested in an ObjectMapper and a
- * MetricsFactory  as types. It is interested in the behavior of providing a metrics object and mapping an object.
+ * This class depends on two other classes ObjectMapper and MetricsFactory.
+ * But upon closer examination, we can see that it really only depends on a single
+ * method each. So this class is not really interested in an ObjectMapper and a
+ * MetricsFactory  as types. It is interested in the behavior of providing a
+ * metrics object and mapping an object.
  * See [MyDomainLogicImproved] on how to better model this.
  */
 class MyDomainLogicOld(

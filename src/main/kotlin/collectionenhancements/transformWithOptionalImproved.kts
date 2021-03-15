@@ -5,7 +5,8 @@ import domain.DomainObject
 import domain.create
 
 /**
- * We are getting a list of [LegacyDataObject] and we want to transform them into [DomainObject].
+ * We are getting a list of [LegacyDataObject] and we want to transform them
+ * into [DomainObject].
  */
 val dataObjects: List<LegacyDataObject> = create()
 

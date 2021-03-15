@@ -15,8 +15,7 @@ fun functionWithTypeInformationImproved(rawData: String) {
     val objectMapper = ObjectMapper()
 
     /**
-     * Sometimes, we want to use generics, and use the type that we have specified. But JVM erases types at runtime,
-     * so we need to pass class objects to preserve that type. Example in Jackson library.
+     * Usage without using class as runtime type information
      */
     val payload1: Payload = objectMapper.readValue<Payload>(rawData)
 

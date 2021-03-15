@@ -6,7 +6,9 @@ import java.time.Instant
 /**
  * We write our own extension function that takes an initializer lambda.
  */
-fun LegacyDataObject.initialize(initializer: (LegacyDataObject) -> Unit): LegacyDataObject {
+fun LegacyDataObject.initialize(
+    initializer: (LegacyDataObject) -> Unit
+): LegacyDataObject {
     initializer(this)
     return this
 }

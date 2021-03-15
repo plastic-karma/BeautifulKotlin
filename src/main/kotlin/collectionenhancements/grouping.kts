@@ -36,6 +36,9 @@ payloads.forEach {
 }
 
 /**
- * Kotlin differentiates between mutable and immutable lists. So this 'seals' the lists that we have just created.
+ * Kotlin differentiates between mutable and immutable lists.
+ * So this 'seals' the lists that we have just created.
  */
-val payloadsByUseCase: Map<String, List<Payload>> = payLoadByIdMutable.mapValues { it.value.toList() }
+val payloadsByUseCase: Map<String, List<Payload>> = payLoadByIdMutable.mapValues {
+    it.value.toList()
+}

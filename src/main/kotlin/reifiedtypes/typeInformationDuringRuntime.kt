@@ -7,8 +7,10 @@ fun functionWithTypeInformation(rawData: String) {
     val objectMapper = ObjectMapper()
 
     /**
-     * Sometimes, we want to use generics, and use the type that we have specified. But JVM erases types at runtime,
-     * so we need to pass class objects to preserve that type. Example in Jackson library.
+     * Sometimes, we want to use generics, and use the type that we have specified.
+     * But Kotlin (as well as Java) erases types at runtime,
+     * so we need to pass class objects to preserve that type.
+     * Example in Jackson library.
      */
-    val payload = objectMapper.readValue<Payload>(rawData, Payload::class.java)
+    val payload: Payload = objectMapper.readValue<Payload>(rawData, Payload::class.java)
 }
